@@ -1170,7 +1170,8 @@
       }
 
       if (pushState) {
-        window.history.pushState({page: tabName}, '', `?page=${tabName}#${tabName}`);
+        const cleanURL = (tabName === 'dashboard') ? window.location.pathname : `#${tabName}`;
+        window.history.pushState({page: tabName}, '', cleanURL);
       }
       
       if(tabName === 'analytics') {
