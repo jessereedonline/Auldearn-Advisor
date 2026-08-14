@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="shortcut icon" href="favicon.png">
-  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../logo.png">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Auldearn Advisors | Elite Trader Directory</title>
+  <title>Browse Master Traders | Auldearn Advisors</title>
   
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   
@@ -66,9 +66,9 @@
     .tab-view.hidden { display: none; opacity: 0; transform: translateY(10px); }
   </style>
 </head>
-<body class="text-slate-100 font-sans min-h-screen overflow-x-hidden selection:bg-cyan-500/30 selection:text-cyan-200">
+<body class="text-slate-100 font-sans min-h-screen overflow-x-hidden selection:bg-cyan-500/30 selection:text-cyan-200" style="background-color:#0F172A;">
 
-  <div class="fixed inset-0 w-full h-full z-0 pointer-events-none" style="display:block;">
+  <div class="fixed inset-0 w-full h-full z-0 pointer-events-none" style="display:block;background-color:#0F172A;">
     <canvas id="shader-canvas-ANIMATION_3" style="display:block;width:100%;height:100%"></canvas>
     <script>
     (function() {
@@ -135,18 +135,18 @@
     <!-- HEADER -->
     <header class="w-full border-b border-slate-800/60 bg-slate-950/60 backdrop-blur-md sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        <a href="#" onclick="switchTab('dashboard')" class="flex items-center space-x-3 group">
-          <img src="logo_header.png" alt="Auldearn Advisors" style="height:3.5rem;width:auto;object-fit:contain;">
+        <a href="../index.html" class="flex items-center space-x-3 group">
+          <img src="../logo_header.png" alt="Auldearn Advisors" style="height:3.5rem;width:auto;object-fit:contain;">
         </a>
         <nav class="hidden md:flex items-center space-x-8">
-          <button onclick="switchTab('dashboard')" id="nav-dashboard" class="nav-btn text-cyan-400 font-medium text-sm tracking-wide transition-all duration-200 py-2 border-b-2 border-cyan-400 hover:text-white">Dashboard</button>
-          <a href="traders/" id="nav-directory" class="nav-btn text-slate-400 hover:text-white font-medium text-sm tracking-wide transition-all duration-200 py-2 border-b-2 border-transparent">Browse Traders</a>
-          <button onclick="switchTab('analytics')" id="nav-analytics" class="nav-btn text-slate-400 hover:text-white font-medium text-sm tracking-wide transition-all duration-200 py-2 border-b-2 border-transparent">Institutional Stats</button>
-          <a href="about.html" id="nav-about" class="nav-btn text-slate-400 hover:text-white font-medium text-sm tracking-wide transition-all duration-200 py-2 border-b-2 border-transparent">About Us</a>
+          <a href="../index.html" id="nav-dashboard" class="nav-btn text-cyan-400 font-medium text-sm tracking-wide transition-all duration-200 py-2 border-b-2 border-cyan-400 hover:text-white">Dashboard</a>
+          <a href="#" id="nav-directory" class="nav-btn text-slate-400 hover:text-white font-medium text-sm tracking-wide transition-all duration-200 py-2 border-b-2 border-transparent">Browse Traders</a>
+          <a href="../index.html?page=analytics#analytics" id="nav-analytics" class="nav-btn text-slate-400 hover:text-white font-medium text-sm tracking-wide transition-all duration-200 py-2 border-b-2 border-transparent">Institutional Stats</a>
+          <a href="../about.html" id="nav-about" class="nav-btn text-slate-400 hover:text-white font-medium text-sm tracking-wide transition-all duration-200 py-2 border-b-2 border-transparent">About Us</a>
         </nav>
         <div class="flex items-center space-x-3">
 
-          <a href="traders/" class="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 font-display font-semibold text-xs tracking-wide uppercase text-white shadow-glow-blue transition-all duration-200">
+          <a href="#" class="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 font-display font-semibold text-xs tracking-wide uppercase text-white shadow-glow-blue transition-all duration-200">
             Find Trader
           </a>
         </div>
@@ -156,273 +156,8 @@
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
       <!-- DASHBOARD -->
-      <section id="view-dashboard" class="tab-view space-y-12">
-        <!-- 1. HERO SECTION WITH RHONDA SOSSNER & AULDEARN PORTFOLIO HUB -->
-        <div class="grid lg:grid-cols-12 gap-8 items-center py-6">
-          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <div class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-indigo-500/10 border border-cyan-400/30 text-cyan-300 font-semibold text-xs tracking-wider uppercase shadow-[0_0_15px_rgba(0,242,255,0.15)]">
-              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping mr-2.5"></span> Auldearn Institutional Advisory & Financial Hub
-            </div>
-            <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight">
-              Elite Stocks and Forex Advisory & <br class="hidden sm:inline">
-              <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent glow-text">Brokerage Portfolios</span>
-            </h1>
-            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
-              Empowering investors with comprehensive financial education, verified copy trading algorithms, and institutional risk management. Led by seasoned stocks & forex professional <strong id="hero-lead-name" class="text-cyan-400 font-semibold">Rhonda Sossner</strong> (7+ Years Market Expertise) and verified master traders.
-            </p>
-            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-              <a href="traders/" class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white font-display font-bold tracking-wide shadow-glow-blue hover:shadow-[0_0_25px_rgba(0,242,255,0.4)] transition-all transform inline-block hover:-translate-y-0.5">
-                Browse Master Traders
-              </a>
-              <a id="hero-coaching-btn" href="https://t.me/rhondasossner" target="_blank" class="px-7 py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-cyan-400/30 text-cyan-400 font-display font-bold tracking-wide transition-all flex items-center space-x-2 shadow-[0_0_15px_rgba(0,242,255,0.1)]">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-                <span>1-on-1 Coaching</span>
-              </a>
-            </div>
-          </div>
-          <div class="lg:col-span-5">
-            <div class="glass-card rounded-2xl p-6 border border-slate-800 shadow-glass relative overflow-hidden">
-              <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none"></div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="font-display font-bold text-slate-200 text-sm uppercase tracking-wider">Live System Feeds</span>
-                <span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span>
-              </div>
-              <div id="live-trades" class="space-y-4 h-64 overflow-y-auto pr-2"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. RHONDA SOSSNER ADVISORY & EXPERTISE FEATURE BANNER (DYNAMIC EXECUTIVE CARD) -->
-        <div class="glass-card rounded-3xl p-8 border border-cyan-500/30 bg-gradient-to-br from-slate-900/90 via-slate-950/90 to-blue-950/40 shadow-[0_0_35px_rgba(0,242,255,0.12)] relative overflow-hidden backdrop-blur-xl">
-          <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-          <div class="grid lg:grid-cols-12 gap-8 items-center relative z-10">
-            <div class="lg:col-span-4 flex flex-col items-center text-center">
-              <div class="relative group mb-4 cursor-pointer" onclick="openLeadAdvisorProfile()">
-                <div class="w-32 h-32 rounded-3xl bg-gradient-to-tr from-cyan-500 via-blue-600 to-indigo-600 p-1 shadow-[0_0_25px_rgba(0,242,255,0.3)] transition-transform group-hover:scale-105">
-                  <div class="w-full h-full rounded-[22px] bg-slate-950 flex flex-col items-center justify-center p-3 text-center border border-cyan-400/20 overflow-hidden relative">
-                    <img id="exec-img" src="" class="absolute inset-0 w-full h-full object-cover hidden">
-                    <span id="exec-initials" class="font-display font-extrabold text-3xl bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">RS</span>
-                    <span class="text-[10px] text-cyan-300 font-semibold uppercase tracking-widest mt-1">Lead Advisor</span>
-                  </div>
-                </div>
-                <span id="exec-exp-badge" class="absolute -bottom-2 bg-emerald-500 text-slate-950 font-black text-[9px] px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-emerald-300 shadow-md">7+ YEARS EXP</span>
-              </div>
-              <h3 id="exec-name" class="font-display font-extrabold text-2xl text-white cursor-pointer hover:text-cyan-300 transition-colors" onclick="openLeadAdvisorProfile()">Rhonda Sossner</h3>
-              <p id="exec-title" class="text-xs text-cyan-400 font-semibold tracking-wider uppercase mt-0.5">Stocks & Forex Professional & Education Specialist</p>
-              <div class="flex items-center justify-center space-x-3 mt-4">
-                <a id="exec-wa-btn" href="https://wa.me/19432168157" target="_blank" class="px-4 py-2 rounded-xl bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/30 text-[#25D366] text-xs font-bold transition-all flex items-center space-x-1.5 shadow-[0_0_15px_rgba(37,211,102,0.15)]">
-                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-                  <span>WhatsApp</span>
-                </a>
-                <a id="exec-tg-btn" href="https://t.me/rhondasossner" target="_blank" class="px-4 py-2 rounded-xl bg-[#0088cc]/15 hover:bg-[#0088cc]/25 border border-[#0088cc]/30 text-[#0088cc] text-xs font-bold transition-all flex items-center space-x-1.5 shadow-[0_0_15px_rgba(0,136,204,0.15)]">
-                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-                  <span>Telegram</span>
-                </a>
-              </div>
-            </div>
-            <div class="lg:col-span-8 space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-extrabold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-400/20">Executive Profile & Philosophy</span>
-                <button onclick="openLeadAdvisorProfile()" class="text-xs text-cyan-400 hover:text-cyan-300 font-bold underline flex items-center space-x-1">
-                  <span>View Full Profile & Copy</span>
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                </button>
-              </div>
-              <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white">Demystifying Stocks, Forex & Institutional Copy Trading</h2>
-              <p id="exec-bio" class="text-slate-300 text-sm leading-relaxed font-light">
-                Rhonda Sossner is a dedicated stocks & forex professional and educator committed to empowering investors with the knowledge, strategic discipline, and verified copy trading algorithms needed to navigate modern financial markets confidently.
-              </p>
-              <div class="grid sm:grid-cols-3 gap-4 pt-2">
-                <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800">
-                  <div id="exec-stat-exp" class="text-cyan-400 font-bold text-sm">7+ Years</div>
-                  <div class="text-[11px] text-slate-400 mt-0.5">Stocks & Forex Trading</div>
-                </div>
-                <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800">
-                  <div class="text-emerald-400 font-bold text-sm">1-on-1 Guidance</div>
-                  <div class="text-[11px] text-slate-400 mt-0.5">Personalized Wealth Coaching</div>
-                </div>
-                <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800">
-                  <div class="text-indigo-400 font-bold text-sm">Proven System</div>
-                  <div class="text-[11px] text-slate-400 mt-0.5">Long-Term Capital Protection</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. FEATURED TRADERS SPOTLIGHT GLASS SHOWCASE -->
-        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-cyan-500/30 bg-slate-900/80 shadow-[0_0_35px_rgba(0,242,255,0.12)] relative overflow-hidden backdrop-blur-xl">
-          <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none"></div>
-          <div class="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-blue-600/10 blur-3xl pointer-events-none"></div>
-          
-          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-800/80 pb-5 mb-6">
-            <div class="flex items-center space-x-3">
-              <div class="w-3 h-3 rounded-full bg-cyan-400 animate-ping"></div>
-              <div>
-                <span id="spotlight-title-badge" class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 font-display font-extrabold text-xs uppercase tracking-widest">TRADER OF THE WEEK</span>
-                <p class="text-xs text-slate-400 font-light mt-1">Configurable from backend spreadsheet or auto-selected top performer</p>
-              </div>
-            </div>
-            <div class="flex items-center space-x-2 bg-slate-950/60 p-1.5 rounded-2xl border border-slate-800/80">
-              <button id="spotlight-tab-day" onclick="renderSpotlightCard('day')" class="px-4 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-white transition-all">Trader of Day</button>
-              <button id="spotlight-tab-week" onclick="renderSpotlightCard('week')" class="px-4 py-2 rounded-xl text-xs font-bold transition-all bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-[0_0_15px_rgba(0,242,255,0.3)]">Trader of Week</button>
-              <button id="spotlight-tab-month" onclick="renderSpotlightCard('month')" class="px-4 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-white transition-all">Trader of Month</button>
-            </div>
-          </div>
-
-          <div class="grid lg:grid-cols-12 gap-6 items-center">
-            <div class="lg:col-span-7 flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
-              <div class="relative">
-                <img id="spotlight-img" src="" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border-2 border-cyan-400/40 shadow-glow-cyan hidden">
-                <div id="spotlight-initials" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-blue-900 to-slate-900 flex items-center justify-center font-display font-extrabold text-3xl text-cyan-400 border-2 border-cyan-400/40 shadow-glow-cyan">JR</div>
-                <span class="absolute -bottom-2 -right-2 bg-emerald-500 text-slate-950 font-black text-[9px] px-2 py-0.5 rounded-full uppercase tracking-wider border border-emerald-300">SPOTLIGHT</span>
-              </div>
-              <div class="space-y-2 text-center sm:text-left">
-                <h3 id="spotlight-name" class="font-display font-extrabold text-2xl sm:text-3xl text-white">John D Rochow</h3>
-                <span id="spotlight-spec" class="text-xs text-cyan-400 font-semibold tracking-wider uppercase block">Equities & Bonds Specialist</span>
-                <p id="spotlight-bio" class="text-xs text-slate-300 font-light line-clamp-2 max-w-lg leading-relaxed">John brings 13 years of institutional trading experience offering unmatched regulatory transparency and risk management.</p>
-                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-2">
-                  <a id="spotlight-wa-btn" href="#" target="_blank" class="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/30 text-[#25D366] text-xs font-bold transition-all shadow-[0_0_15px_rgba(37,211,102,0.1)]">
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-                    <span>WhatsApp</span>
-                  </a>
-                  <a id="spotlight-tg-btn" href="#" target="_blank" class="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-[#0088cc]/10 hover:bg-[#0088cc]/20 border border-[#0088cc]/30 text-[#0088cc] text-xs font-bold transition-all shadow-[0_0_15px_rgba(0,136,204,0.1)]">
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-                    <span>Telegram</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="lg:col-span-5 flex flex-col justify-between space-y-4 bg-slate-950/60 p-5 rounded-2xl border border-slate-800/80">
-              <div class="grid grid-cols-3 gap-2 text-center">
-                <div>
-                  <span class="text-[9px] text-slate-400 uppercase font-semibold block">1-Year Profit</span>
-                  <div id="spotlight-profit" class="text-xl font-display font-extrabold text-cyan-400 mt-1">+42.1%</div>
-                </div>
-                <div class="border-x border-slate-800">
-                  <span class="text-[9px] text-slate-400 uppercase font-semibold block">Money Managed</span>
-                  <div id="spotlight-aum" class="text-xl font-display font-extrabold text-white mt-1">$19.8M</div>
-                </div>
-                <div>
-                  <span class="text-[9px] text-slate-400 uppercase font-semibold block">Safety Rating</span>
-                  <div id="spotlight-safety" class="text-xl font-display font-extrabold text-emerald-400 mt-1">2.15</div>
-                </div>
-              </div>
-              <button id="spotlight-view-btn" class="w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-display font-bold text-xs uppercase tracking-wider shadow-glow-blue transition-all">View Profile & Contact Trader</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. CORE SERVICES & ADVISORY GRID -->
-        <div class="space-y-6">
-          <div class="text-center max-w-2xl mx-auto space-y-2">
-            <span class="text-xs font-extrabold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-400/20">Comprehensive Stocks & Forex Services</span>
-            <h2 class="font-display font-extrabold text-3xl text-white">Advisory & Trading Mastery</h2>
-            <p class="text-slate-400 text-sm font-light">Explore our 6 core features designed to guide individuals and institutional investors through stocks, foreign exchange, and portfolio management success.</p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Feature 1 -->
-            <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/40 transition-all group hover:-translate-y-1 relative overflow-hidden">
-              <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">Stocks & Forex Fundamentals</h3>
-              <p class="text-slate-300 text-xs mt-2 leading-relaxed font-light">Master the core concepts of equity valuation, currency pairs, central bank interest rate policies, and financial market fundamentals with structured training.</p>
-              <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-cyan-400 font-semibold">
-                <span>Foundational Mastery</span>
-                <span class="text-slate-500">Feature 01</span>
-              </div>
-            </div>
-
-            <!-- Feature 2 -->
-            <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/40 transition-all group hover:-translate-y-1 relative overflow-hidden">
-              <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">Advanced Stocks & Forex Trading</h3>
-              <p class="text-slate-300 text-xs mt-2 leading-relaxed font-light">Unlock sophisticated multi-asset technical analysis, macro rotational models, momentum breakout algorithms, and quantitative execution.</p>
-              <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-cyan-400 font-semibold">
-                <span>Quantitative Execution</span>
-                <span class="text-slate-500">Feature 02</span>
-              </div>
-            </div>
-
-            <!-- Feature 3 -->
-            <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/40 transition-all group hover:-translate-y-1 relative overflow-hidden">
-              <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">Currency Yield & Swaps Infrastructure</h3>
-              <p class="text-slate-300 text-xs mt-2 leading-relaxed font-light">Navigate foreign exchange markets, interest rate swaps, forex yield optimization, liquidity management, and multi-currency portfolio hedging.</p>
-              <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-cyan-400 font-semibold">
-                <span>Forex Yield & Liquidity</span>
-                <span class="text-slate-500">Feature 03</span>
-              </div>
-            </div>
-
-            <!-- Feature 4 -->
-            <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/40 transition-all group hover:-translate-y-1 relative overflow-hidden">
-              <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">Institutional Account Custody</h3>
-              <p class="text-slate-300 text-xs mt-2 leading-relaxed font-light">Protect capital with tier-1 regulated custodian accounts, segregated investor funds, encrypted API keys, and FINRA-compliant brokerage transparency.</p>
-              <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-cyan-400 font-semibold">
-                <span>Segregated Brokerage</span>
-                <span class="text-slate-500">Feature 04</span>
-              </div>
-            </div>
-
-            <!-- Feature 5 -->
-            <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/40 transition-all group hover:-translate-y-1 relative overflow-hidden">
-              <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">Portfolio Risk & Drawdown Control</h3>
-              <p class="text-slate-300 text-xs mt-2 leading-relaxed font-light">Implement mathematical risk budgeting, strict drawdown capping, dynamic leverage limits, and multi-asset position sizing for sustainable compounding.</p>
-              <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-cyan-400 font-semibold">
-                <span>Capital Preservation</span>
-                <span class="text-slate-500">Feature 05</span>
-              </div>
-            </div>
-
-            <!-- Feature 6 -->
-            <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/40 transition-all group hover:-translate-y-1 relative overflow-hidden">
-              <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">1-on-1 Mentorship & Copy Setup</h3>
-              <p class="text-slate-300 text-xs mt-2 leading-relaxed font-light">Direct 1-on-1 advisory sessions, portfolio review audits, custom API copy trading connections, and dedicated Telegram/WhatsApp VIP desk access.</p>
-              <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-cyan-400 font-semibold">
-                <span>Personal Advisory</span>
-                <span class="text-slate-500">Feature 06</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. KEY PERFORMANCE STATS GRID -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-slate-800 hover:border-cyan-500/30 transition-all">
-            <div>
-              <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Total Money Managed</span>
-              <h3 class="font-display font-bold text-3xl text-white mt-2">$2.6B</h3>
-            </div>
-            <span class="text-[11px] text-cyan-400 font-medium mt-3 inline-block">Across Verified Accounts</span>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-slate-800 hover:border-cyan-500/30 transition-all">
-            <div>
-              <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Average Yearly Profit</span>
-              <h3 class="font-display font-bold text-3xl text-cyan-400 mt-2">73.8%</h3>
-            </div>
-            <span class="text-[11px] text-emerald-400 font-medium mt-3 inline-block">12-Month Audited CAGR</span>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-slate-800 hover:border-cyan-500/30 transition-all">
-            <div>
-              <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Safety & Stability Rating</span>
-              <h3 class="font-display font-bold text-3xl text-white mt-2">2.21 / 3.0</h3>
-            </div>
-            <span class="text-[11px] text-indigo-400 font-medium mt-3 inline-block">Institutional Safety Grade</span>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-slate-800 hover:border-cyan-500/30 transition-all">
-            <div>
-              <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Happy Investors Copying</span>
-              <h3 class="font-display font-bold text-3xl text-white mt-2">4,812</h3>
-            </div>
-            <span class="text-[11px] text-cyan-400 font-medium mt-3 inline-block">Global Active Copy Traders</span>
-          </div>
-        </div>
-      </section>
-
       <!-- DIRECTORY -->
-      <section id="view-directory" class="tab-view space-y-8 hidden">
+      <section id="view-directory" class="tab-view space-y-8">
         <div class="glass-card rounded-2xl p-6 border border-slate-800 space-y-4">
           <div class="flex flex-col lg:flex-row gap-4 items-center justify-between">
             <div class="w-full lg:max-w-md relative">
@@ -592,10 +327,10 @@
           <div class="space-y-4">
             <h4 class="text-white font-bold text-sm tracking-wide">Legal</h4>
             <ul class="space-y-2 text-xs text-slate-400 font-light">
-              <li><a href="about.html" class="hover:text-cyan-400 transition-colors">About Us</a></li>
-              <li><a href="privacy.html" class="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
-              <li><a href="terms.html" class="hover:text-cyan-400 transition-colors">Terms of Service</a></li>
-              <li><a href="aml.html" class="hover:text-cyan-400 transition-colors">AML Policy</a></li>
+              <li><a href="../about.html" class="hover:text-cyan-400 transition-colors">About Us</a></li>
+              <li><a href="../privacy.html" class="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
+              <li><a href="../terms.html" class="hover:text-cyan-400 transition-colors">Terms of Service</a></li>
+              <li><a href="../aml.html" class="hover:text-cyan-400 transition-colors">AML Policy</a></li>
             </ul>
           </div>
           <div class="space-y-4">
@@ -1120,7 +855,7 @@
       if (targetSlug) {
         const target = tradersData.find(t => t.slug === targetSlug);
         if (target) {
-          window.location.href = 'traders/';
+          switchTab('directory', false);
           openProfileModal(target.id, true);
           return;
         }
@@ -1149,35 +884,9 @@
 
     
     function switchTab(tabName, pushState = true) {
-      if (tabName === 'directory') {
-        window.location.href = 'traders/';
-        return;
-      }
-      document.querySelectorAll('.tab-view').forEach(el => el.classList.add('hidden'));
-      document.querySelectorAll('.nav-btn').forEach(el => {
-        el.classList.remove('text-cyan-400', 'border-cyan-400');
-        el.classList.add('text-slate-400', 'border-transparent');
-      });
-
-      const targetSection = document.getElementById('view-' + tabName);
-      if (targetSection) targetSection.classList.remove('hidden');
-      
-      const targetNav = document.getElementById('nav-' + tabName);
-      if (targetNav) {
-        targetNav.classList.remove('text-slate-400', 'border-transparent');
-        targetNav.classList.add('text-cyan-400', 'border-cyan-400');
-      }
-
-      if (pushState) {
-        window.history.pushState({page: tabName}, '', `?page=${tabName}#${tabName}`);
-      }
-      
-      if(tabName === 'analytics') {
-        const chartTrader = tradersData[0];
-        if (chartTrader) renderInteractiveChart(chartTrader);
-      }
+      // Stub out switchTab for the traders page so clicking links doesn't error
     }
-    function renderTraders(list) {
+function renderTraders(list) {
       const grid = document.getElementById('trader-grid');
       const noResults = document.getElementById('no-results');
       grid.innerHTML = '';
