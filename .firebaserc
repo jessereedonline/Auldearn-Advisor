@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "auldearn-advisor"
-  }
+    "default": "auldearn-advisors"
+  },
+  "targets": {},
+  "etags": {}
 }
