@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "auldearn-advisors",
     "public": ".",
     "ignore": [
       "firebase.json",
