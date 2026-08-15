@@ -299,6 +299,29 @@
               <span class="text-xs text-slate-400 uppercase tracking-widest font-bold">Where Money Is Invested (Portfolio Mix)</span>
               <div id="allocation-matrix" class="flex flex-wrap gap-2"></div>
             </div>
+
+            <div id="modal-employment-container" class="space-y-3 pt-2">
+              <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span class="text-xs text-slate-400 uppercase tracking-widest font-bold">Employment History</span>
+              </div>
+              <div class="glass-card rounded-xl border border-slate-800/80 overflow-hidden">
+                <div class="overflow-x-auto">
+                  <table class="w-full text-left text-xs">
+                    <thead class="bg-slate-950/80 border-b border-slate-800 text-[10px] text-slate-400 uppercase font-extrabold tracking-wider">
+                      <tr>
+                        <th class="py-2.5 px-3">Firm Name</th>
+                        <th class="py-2.5 px-3">Years</th>
+                        <th class="py-2.5 px-3">Dates</th>
+                      </tr>
+                    </thead>
+                    <tbody id="modal-employment-body" class="divide-y divide-slate-800/50 text-slate-200">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
