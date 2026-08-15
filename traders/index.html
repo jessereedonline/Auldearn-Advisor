@@ -664,7 +664,8 @@
                        licenses: obj['licenses'] || 'Series 7, Series 63',
                        link: obj['finralink'] || 'https://brokercheck.finra.org/'
                     },
-                    social: {
+                     employmentHistory: (function(o){ const k = Object.keys(o).find(key => key.toLowerCase().includes('employ')); return k ? o[k] : ''; })(obj),
+                     social: {
                        whatsapp: obj['whatsapp'] || '',
                        telegram: obj['telegram'] || '',
                        linkedin: obj['linkedin'] || '',
