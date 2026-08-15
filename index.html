@@ -815,14 +815,15 @@
     const sheetCSVUrl = 'https://docs.google.com/spreadsheets/d/1-nRp8LCNg45IA4C0F8OLrFyC5U-Zt-wZlgumxhnCMhc/export?format=csv';
 
     const defaultTradersData = [
-      { id: 1, name: "Sarah Jenkins", slug: "sarah-jenkins", initials: "SJ", image: "", risk: "moderate", strategy: "quantitative", return: 34.2, aum: 12.4, sharpe: 2.45, drawdown: 5.4, spec: "FX & Equities", duration: "4.8 Hrs", featured: "month", bio: "Sarah is a quantitative developer with 8 years of experience. Her models utilize high-frequency statistical arbitrage overlays on major currency pairs.", allocation: { "FX Major": 50, "FX Minor": 20, "Equities Index": 20, "Cash": 10 }, equityCurve: [1000, 1040, 1020, 1070, 1110, 1090, 1140, 1210, 1260, 1280, 1310, 1342], verification: { crd: "5821033", experience: "8 Years", licenses: "12 State Licenses", link: "https://brokercheck.finra.org/" }, social: { whatsapp: "https://wa.me/1234567890", telegram: "https://t.me/example", linkedin: "https://linkedin.com", twitter: "https://twitter.com" } },
-      { id: 2, name: "Alexandre Dubois", slug: "alexandre-dubois", initials: "AD", image: "", risk: "aggressive", strategy: "trend", return: 58.7, aum: 8.9, sharpe: 1.82, drawdown: 12.1, spec: "Stocks & Commodities", duration: "18.2 Hrs", featured: "day", bio: "Alexandre operates an aggressive breakout strategy across stock indexes and high-liquidity commodity futures.", allocation: { "Tech Stocks": 45, "Growth Equities": 25, "Gold/Silver": 20, "Energy": 10 }, equityCurve: [1000, 950, 1080, 1150, 1100, 1250, 1380, 1310, 1420, 1490, 1510, 1587], verification: { crd: "4921099", experience: "5 Years", licenses: "3 State Licenses", link: "https://brokercheck.finra.org/" }, social: { whatsapp: "https://wa.me/1234567890", telegram: "https://t.me/example", twitter: "https://twitter.com" } },
-      { id: 3, name: "Elena Rostova", slug: "elena-rostova", initials: "ER", image: "", risk: "conservative", strategy: "macro", return: 14.5, aum: 24.1, sharpe: 2.81, drawdown: 2.3, spec: "Sovereign Bonds & Indexes", duration: "72.0 Hrs", featured: "", bio: "Elena was formerly a lead risk manager for a Swiss sovereign wealth fund. Her portfolio leverages global macroeconomic changes and interest rate curves.", allocation: { "Govt Bonds": 60, "Global Indexes": 25, "Defensive ETF": 10, "Cash": 5 }, equityCurve: [1000, 1010, 1025, 1030, 1045, 1060, 1075, 1090, 1105, 1115, 1130, 1145], verification: { crd: "3182931", experience: "22 Years", licenses: "50 State Licenses", link: "https://brokercheck.finra.org/" }, social: { whatsapp: "https://wa.me/1234567890", telegram: "https://t.me/example", linkedin: "https://linkedin.com" } },
-      { id: 4, name: "John D Rochow", slug: "john-d-rochow", initials: "JR", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9nDzml0IgRoomhQZG1LxbIIerz-jrzIrT6FYWhjcYTw&s=10", risk: "moderate", strategy: "macro", return: 42.1, aum: 19.8, sharpe: 2.15, drawdown: 6.2, spec: "Equities & Bonds", duration: "14.5 Hrs", featured: "week", bio: "John brings 13 years of institutional trading experience offering unmatched regulatory transparency and risk management. His portfolio specializes in macro equity rotations.", allocation: { "US Equities": 55, "Bonds": 30, "Commodities": 10, "Cash": 5 }, equityCurve: [1000, 1020, 1060, 1040, 1100, 1150, 1200, 1250, 1290, 1330, 1380, 1421], verification: { crd: "6192717", experience: "13 Years", licenses: "48 State Licenses", link: "https://brokercheck.finra.org/individual/summary/6192717" }, social: { whatsapp: "https://wa.me/1234567890", telegram: "https://t.me/example" } },
+      { id: 1, name: "Sarah Jenkins", slug: "sarah-jenkins", initials: "SJ", image: "", risk: "moderate", strategy: "quantitative", return: 34.2, aum: 12.4, sharpe: 2.45, drawdown: 5.4, spec: "FX & Equities", duration: "4.8 Hrs", featured: "month", bio: "Sarah is a quantitative developer with 8 years of experience. Her models utilize high-frequency statistical arbitrage overlays on major currency pairs.", allocation: { "FX Major": 50, "FX Minor": 20, "Equities Index": 20, "Cash": 10 }, equityCurve: [1000, 1040, 1020, 1070, 1110, 1090, 1140, 1210, 1260, 1280, 1310, 1342], verification: { crd: "5821033", experience: "8 Years", licenses: "12 State Licenses", link: "https://brokercheck.finra.org/" }, social: { whatsapp: "", telegram: "", linkedin: "https://linkedin.com", twitter: "https://twitter.com" } },
+      { id: 2, name: "Alexandre Dubois", slug: "alexandre-dubois", initials: "AD", image: "", risk: "aggressive", strategy: "trend", return: 58.7, aum: 8.9, sharpe: 1.82, drawdown: 12.1, spec: "Stocks & Commodities", duration: "18.2 Hrs", featured: "day", bio: "Alexandre operates an aggressive breakout strategy across stock indexes and high-liquidity commodity futures.", allocation: { "Tech Stocks": 45, "Growth Equities": 25, "Gold/Silver": 20, "Energy": 10 }, equityCurve: [1000, 950, 1080, 1150, 1100, 1250, 1380, 1310, 1420, 1490, 1510, 1587], verification: { crd: "4921099", experience: "5 Years", licenses: "3 State Licenses", link: "https://brokercheck.finra.org/" }, social: { whatsapp: "", telegram: "", twitter: "https://twitter.com" } },
+      { id: 3, name: "Elena Rostova", slug: "elena-rostova", initials: "ER", image: "", risk: "conservative", strategy: "macro", return: 14.5, aum: 24.1, sharpe: 2.81, drawdown: 2.3, spec: "Sovereign Bonds & Indexes", duration: "72.0 Hrs", featured: "", bio: "Elena was formerly a lead risk manager for a Swiss sovereign wealth fund. Her portfolio leverages global macroeconomic changes and interest rate curves.", allocation: { "Govt Bonds": 60, "Global Indexes": 25, "Defensive ETF": 10, "Cash": 5 }, equityCurve: [1000, 1010, 1025, 1030, 1045, 1060, 1075, 1090, 1105, 1115, 1130, 1145], verification: { crd: "3182931", experience: "22 Years", licenses: "50 State Licenses", link: "https://brokercheck.finra.org/" }, social: { whatsapp: "", telegram: "", linkedin: "https://linkedin.com" } },
+      { id: 4, name: "John D Rochow", slug: "john-d-rochow", initials: "JR", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9nDzml0IgRoomhQZG1LxbIIerz-jrzIrT6FYWhjcYTw&s=10", risk: "moderate", strategy: "macro", return: 42.1, aum: 19.8, sharpe: 2.15, drawdown: 6.2, spec: "Equities & Bonds", duration: "14.5 Hrs", featured: "week", bio: "John brings 13 years of institutional trading experience offering unmatched regulatory transparency and risk management. His portfolio specializes in macro equity rotations.", allocation: { "US Equities": 55, "Bonds": 30, "Commodities": 10, "Cash": 5 }, equityCurve: [1000, 1020, 1060, 1040, 1100, 1150, 1200, 1250, 1290, 1330, 1380, 1421], verification: { crd: "6192717", experience: "13 Years", licenses: "48 State Licenses", link: "https://brokercheck.finra.org/individual/summary/6192717" }, social: { whatsapp: "", telegram: "" } },
       { id: 5, name: "Rhonda Sossner", slug: "rhonda-sossner", initials: "RS", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRNn0ecaXTJUXdi-uhcnLtJYbkkdOyeynQ0WAZFPMKBw&s", risk: "moderate", strategy: "macro", return: 46.8, aum: 28.5, sharpe: 2.62, drawdown: 3.8, spec: "Stocks & Forex Specialist", duration: "12.0 Hrs", featured: "executive", bio: "Rhonda Sossner is a seasoned stocks & forex professional and educator committed to empowering investors with the knowledge, strategic discipline, and verified copy trading algorithms needed to navigate modern financial markets confidently.", allocation: { "US Equities": 45, "Forex Majors": 35, "Sovereign Bonds": 15, "Cash": 5 }, equityCurve: [1000, 1030, 1070, 1120, 1180, 1240, 1310, 1370, 1410, 1440, 1468], verification: { crd: "6910284", experience: "7+ Years", licenses: "Series 7, Series 66", link: "https://brokercheck.finra.org/" }, social: { whatsapp: "https://wa.me/19432168157", telegram: "https://t.me/rhondasossner", linkedin: "https://linkedin.com", twitter: "https://twitter.com" } }
     ];
 
-    let tradersData = JSON.parse(localStorage.getItem('auldearn_traders_data')) || defaultTradersData;
+    localStorage.removeItem('auldearn_traders_data');
+    let tradersData = defaultTradersData;
     
     // Save to localStorage if it wasn't there
     if (!localStorage.getItem('auldearn_traders_data')) {
@@ -901,8 +902,8 @@
                        link: obj['finralink'] || 'https://brokercheck.finra.org/'
                     },
                     social: {
-                       whatsapp: obj['whatsapp'] || 'https://wa.me/1234567890',
-                       telegram: obj['telegram'] || 'https://t.me/example',
+                       whatsapp: obj['whatsapp'] || '',
+                       telegram: obj['telegram'] || '',
                        linkedin: obj['linkedin'] || '',
                        twitter: obj['twitter'] || '',
                        instagram: obj['instagram'] || ''
@@ -1051,8 +1052,8 @@
 
       const waBtn = document.getElementById('spotlight-wa-btn');
       const tgBtn = document.getElementById('spotlight-tg-btn');
-      if (waBtn) waBtn.href = target.social?.whatsapp || 'https://wa.me/1234567890';
-      if (tgBtn) tgBtn.href = target.social?.telegram || 'https://t.me/example';
+      if (waBtn) waBtn.href = target.social?.whatsapp || '';
+      if (tgBtn) tgBtn.href = target.social?.telegram || '';
     }
 
     // -------------------------------------------------------------
@@ -1344,11 +1345,17 @@
       const twBtn = document.getElementById('modal-twitter');
       const igBtn = document.getElementById('modal-instagram');
       
-      if(t.social?.whatsapp) { wBtn.href = t.social.whatsapp; wBtn.classList.remove('hidden'); wBtn.classList.add('flex'); } else { wBtn.classList.add('hidden'); wBtn.classList.remove('flex'); }
-      if(t.social?.telegram) { tBtn.href = t.social.telegram; tBtn.classList.remove('hidden'); tBtn.classList.add('flex'); } else { tBtn.classList.add('hidden'); tBtn.classList.remove('flex'); }
-      if(t.social?.linkedin) { inBtn.href = t.social.linkedin; inBtn.classList.remove('hidden'); } else { inBtn.classList.add('hidden'); }
-      if(t.social?.twitter) { twBtn.href = t.social.twitter; twBtn.classList.remove('hidden'); } else { twBtn.classList.add('hidden'); }
-      if(t.social?.instagram) { igBtn.href = t.social.instagram; igBtn.classList.remove('hidden'); } else { igBtn.classList.add('hidden'); }
+      const hasWA = t.social?.whatsapp && t.social.whatsapp.trim() !== '' && t.social.whatsapp !== '#N/A' && !t.social.whatsapp.includes('1234567890');
+      const hasTG = t.social?.telegram && t.social.telegram.trim() !== '' && t.social.telegram !== '#N/A' && !t.social.telegram.includes('example');
+      const hasIN = t.social?.linkedin && t.social.linkedin.trim() !== '' && t.social.linkedin !== '#N/A';
+      const hasTW = t.social?.twitter && t.social.twitter.trim() !== '' && t.social.twitter !== '#N/A';
+      const hasIG = t.social?.instagram && t.social.instagram.trim() !== '' && t.social.instagram !== '#N/A';
+
+      if(hasWA) { wBtn.href = t.social.whatsapp; wBtn.classList.remove('hidden'); wBtn.classList.add('flex'); } else { wBtn.classList.add('hidden'); wBtn.classList.remove('flex'); }
+      if(hasTG) { tBtn.href = t.social.telegram; tBtn.classList.remove('hidden'); tBtn.classList.add('flex'); } else { tBtn.classList.add('hidden'); tBtn.classList.remove('flex'); }
+      if(hasIN) { inBtn.href = t.social.linkedin; inBtn.classList.remove('hidden'); } else { inBtn.classList.add('hidden'); }
+      if(hasTW) { twBtn.href = t.social.twitter; twBtn.classList.remove('hidden'); } else { twBtn.classList.add('hidden'); }
+      if(hasIG) { igBtn.href = t.social.instagram; igBtn.classList.remove('hidden'); } else { igBtn.classList.add('hidden'); }
 
       document.getElementById('profile-modal').classList.remove('hidden');
       renderInteractiveChart(t);
