@@ -65,6 +65,19 @@
     .glow-text { text-shadow: 0 0 12px rgba(0, 242, 255, 0.5); }
     .tab-view { transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out; }
     .tab-view.hidden { display: none; opacity: 0; transform: translateY(10px); }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 25s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
   </style>
 </head>
 <body class="text-slate-100 font-sans min-h-screen overflow-x-hidden selection:bg-cyan-500/30 selection:text-cyan-200">
@@ -420,6 +433,44 @@
             <span class="text-[11px] text-cyan-400 font-medium mt-3 inline-block">Global Active Copy Traders</span>
           </div>
         </div>
+
+        <!-- 6. SUPPORTED & VERIFIED BRANDS MARQUEE -->
+        <div class="pt-8 pb-4 space-y-4">
+          <div class="text-center">
+            <span class="text-[11px] font-extrabold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-400/20">Supported Brands & Institutional Partners</span>
+          </div>
+          <div class="relative w-full overflow-hidden py-4 rounded-2xl glass-card border border-slate-800/80 shadow-2xl">
+            <!-- Fade gradients on left & right edges -->
+            <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#0F172A] to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#0F172A] to-transparent z-10 pointer-events-none"></div>
+            
+            <div class="flex items-center space-x-8 animate-marquee whitespace-nowrap">
+              <!-- First Set -->
+              <div class="flex items-center space-x-8 shrink-0">
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-cyan-400 text-sm">🛡️</span> FINRA</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-blue-400 text-sm">🔍</span> BrokerCheck</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-amber-400 text-sm">⚡</span> Koinbit</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-cyan-300 text-sm">🏛️</span> J.P. Morgan</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-emerald-400 text-sm">📺</span> CNBC</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-yellow-400 text-sm">🟡</span> Binance</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-blue-500 text-sm">📈</span> TradingView</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-emerald-500 text-sm">🪶</span> Robinhood</div>
+              </div>
+              <!-- Duplicate Set for Seamless Loop -->
+              <div class="flex items-center space-x-8 shrink-0">
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-cyan-400 text-sm">🛡️</span> FINRA</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-blue-400 text-sm">🔍</span> BrokerCheck</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-amber-400 text-sm">⚡</span> Koinbit</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-cyan-300 text-sm">🏛️</span> J.P. Morgan</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-emerald-400 text-sm">📺</span> CNBC</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-yellow-400 text-sm">🟡</span> Binance</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-blue-500 text-sm">📈</span> TradingView</div>
+                <div class="flex items-center space-x-2 text-slate-200 font-display font-extrabold text-xs tracking-wider uppercase bg-slate-950/80 px-4 py-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/40 transition-colors shadow-sm"><span class="text-emerald-500 text-sm">🪶</span> Robinhood</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
       <!-- DIRECTORY -->
