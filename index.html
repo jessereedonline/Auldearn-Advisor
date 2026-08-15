@@ -450,9 +450,14 @@
                 <option value="all">All Risk Levels</option><option value="conservative">Low Risk (Safe & Steady)</option><option value="moderate">Medium Risk (Balanced)</option><option value="aggressive">High Risk (High Reward)</option>
               </select>
             </div>
-            <div class="space-y-1.5"><label class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Trading Style</label>
+            <div class="space-y-1.5"><label class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Market Specialization</label>
               <select id="filter-strategy" onchange="filterTraders()" class="w-full glass-input rounded-xl text-xs py-2 px-3 focus:ring-0 border border-slate-700/50">
-                <option value="all">All Trading Styles</option><option value="quantitative">Math & Smart Algorithms</option><option value="trend">Market Wave Riding</option><option value="macro">Global Economy Trends</option><option value="arbitrage">Price Gap Catching</option>
+                <option value="all">All Specializations</option>
+                <option value="equities">Stocks & Equities</option>
+                <option value="forex">Forex / FX</option>
+                <option value="crypto">Crypto</option>
+                <option value="commodities">Commodities</option>
+                <option value="bonds">Bonds & Fixed Income</option>
               </select>
             </div>
           </div>
@@ -916,7 +921,7 @@
         }
       } catch (e) { console.warn("Failed to fetch Google Sheets CSV, using fallback defaults.", e); }
       
-      renderTraders(tradersData);
+      filterTraders();
       renderSpotlightCard('week');
       renderExecutiveProfile();
       generateActivityFeed();
@@ -1265,15 +1270,42 @@
     }
 
     function filterTraders() {
-      const search = document.getElementById('search-input').value.toLowerCase();
-      const risk = document.getElementById('filter-risk').value;
-      const strategy = document.getElementById('filter-strategy').value;
+      const searchEl = document.getElementById('search-input');
+      const search = (searchEl ? searchEl.value : '').toLowerCase();
+      const riskEl = document.getElementById('filter-risk');
+      const risk = riskEl ? riskEl.value : 'all';
+      const specEl = document.getElementById('filter-strategy');
+      const spec = specEl ? specEl.value : 'all';
+      const sortEl = document.getElementById('sort-select');
+      const sortVal = sortEl ? sortEl.value : 'return-desc';
+
       let filtered = tradersData.filter(t => {
-        const matchesSearch = t.name.toLowerCase().includes(search) || t.bio.toLowerCase().includes(search);
+        const textSearch = ((t.name || '') + ' ' + (t.bio || '') + ' ' + (t.spec || '') + ' ' + (t.strategy || '')).toLowerCase();
+        const matchesSearch = textSearch.includes(search);
         const matchesRisk = (risk === 'all') || (t.risk === risk);
-        const matchesStrategy = (strategy === 'all') || (t.strategy === strategy);
-        return matchesSearch && matchesRisk && matchesStrategy;
+        
+        let matchesSpec = true;
+        if (spec !== 'all') {
+          const specText = ((t.spec || '') + ' ' + (t.strategy || '') + ' ' + (t.bio || '')).toLowerCase();
+          if (spec === 'equities') matchesSpec = specText.includes('stock') || specText.includes('equit');
+          else if (spec === 'forex') matchesSpec = specText.includes('forex') || specText.includes('fx') || specText.includes('currency');
+          else if (spec === 'crypto') matchesSpec = specText.includes('crypto') || specText.includes('btc') || specText.includes('coin');
+          else if (spec === 'commodities') matchesSpec = specText.includes('commodit') || specText.includes('gold') || specText.includes('oil') || specText.includes('energy');
+          else if (spec === 'bonds') matchesSpec = specText.includes('bond') || specText.includes('fixed income') || specText.includes('sovereign');
+        }
+        
+        return matchesSearch && matchesRisk && matchesSpec;
       });
+
+      // Apply Sorting
+      filtered.sort((a, b) => {
+        if (sortVal === 'return-desc') return (b.return || 0) - (a.return || 0);
+        if (sortVal === 'sharpe-desc') return (b.sharpe || 0) - (a.sharpe || 0);
+        if (sortVal === 'aum-desc') return (b.aum || 0) - (a.aum || 0);
+        if (sortVal === 'name-asc') return (a.name || '').localeCompare(b.name || '');
+        return 0;
+      });
+
       renderTraders(filtered);
     }
 
